@@ -29,6 +29,15 @@
 }
 }
 
+@media(min-width:900px){
+  .App{
+    margin: auto;
+    max-width: 50vw;
+    max-height: 60vh;
+    margin-top: 8vh;
+  }
+}
+
 /* .header{
  
   margin: auto;
