@@ -1,4 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+
 .App {
+  background-color: #f8e3d2;
+  height: 100vh;
+  color: black;
+  font-family: 'Noto Serif', serif;
+  /* hide the white space--found this through inspection */
+  overflow: hidden;
+  margin: auto;
+  max-width: 75vw;
+  margin-top: 5vh;
+  height: 90vh;
+  /* border: 2px solid black; */
+  
+  
+}
+
+* body{
+  background-color: #f8e3d2;
+  margin: 0;
+  
+}
+
+@media(max-width:600px){
+.App{
+  margin: auto;
+  max-width: 95vw;
+}
+}
+
+/* .header{
+ 
+  margin: auto;
+  width: 100%;
+  text-align: center;
+} */
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +72,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
