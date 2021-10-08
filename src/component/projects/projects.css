@@ -1,0 +1,40 @@
+.link-project {
+  text-decoration: none;
+  color: #424242;
+  color: var(--background);
+  padding: 1rem;
+  border-radius: 8px;
+  transition: background 0.3s ease-in;
+  background-color: ivory;
+}
+
+.link-github {
+  color: black;
+  padding: 0px;
+  margin-left: 0px;
+  text-decoration: none;
+  width: fit-content;
+}
+
+.link-github:hover {
+  text-decoration: underline;
+}
+
+.work-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: flex-start;
+  width: fit-content;
+}
+
+.work {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  animation: App-logo-spin infinite 20s linear;
+}
+
+a.link-project:hover {
+  background-color: #eebab2;
+  cursor: pointer;
+}

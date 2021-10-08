@@ -1,49 +1,53 @@
-import  React,{ useEffect} from 'react';
-import { useHistory, Link } from 'react-router-dom'
-import Box from '@mui/material/Box';
-import BottomNavigation from '@mui/material/BottomNavigation';
-import BottomNavigationAction from '@mui/material/BottomNavigationAction';
+import { useState } from "react";
+import Badge from "@mui/material/Badge";
+import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 
-import GitHubIcon from '@mui/icons-material/GitHub';
-import WorkIcon from '@mui/icons-material/Work';
-import EmailIcon from '@mui/icons-material/Email';
-import HomeIcon from '@mui/icons-material/Home';
+import "./footer.css";
 
-export default function SimpleBottomNavigation() {
-  const [value, setValue] = React.useState(0);
-    
-  const history = useHistory();
+const Footer = () => {
+  const [copyText, setCopyText] = useState("email");
+  const [copySuccess, setCopySuccess] = useState("");
 
-  useEffect(() => {
-  
-      
-      return value === 0 ? history.push('/'):
-      value === 1 ? history.push('/projects'): 
-      value === 2 ? history.push('/contact'):
-      null;
-      
-  }, [value, history])
-  
+  const handleFlip = () => {
+    setCopyText("prem.sherpa890@gmail.com");
 
+    setTimeout(() => {
+      setCopyText("email");
+    }, 6000);
+  };
 
-  
+  const handleIconClick = (e) => {
+    setCopyText("prem.sherpa890@gmail.com");
 
-  return (
-    <Box sx={{ width: '100vw', bottom:0, position:'fixed', }}>
-      <BottomNavigation
-        showLabels
-        value={value}
-        onChange={(event, newValue) => {
-          setValue(newValue);
-        }}
-        sx={{backgroundColor:'#3c402f',  }}
-        
-      >
+    navigator.clipboard.writeText(copyText);
+    setCopySuccess("copied");
 
-        <BottomNavigationAction sx={{color:'#f2eeeb',}}  label="Home" icon={<HomeIcon/>}    />
-        <BottomNavigationAction sx={{color:'#f2eeeb',}}  label="Projects" icon={<WorkIcon/>}    />
-        <BottomNavigationAction sx={{color:'#f2eeeb',}}  label="Contact Me" icon={<EmailIcon/>}/>
-      </BottomNavigation>
-    </Box>
-  );
-}
+    setTimeout(() => {
+      setCopySuccess("");
+    }, 500);
+  };
+
+  const Email = () => {
+    return (
+      <div className="home-footer" onClick={handleFlip}>
+        {copyText === "email" ? (
+          copyText
+        ) : (
+          <div className="email-footer">
+            <span>{copyText}</span>&nbsp;&nbsp;
+            <Badge badgeContent={copySuccess} sx={{ padding: "1px" }}>
+              <ContentCopyIcon
+                fontSize="small"
+                onClick={(e) => handleIconClick(e)}
+              />
+            </Badge>
+          </div>
+        )}
+      </div>
+    );
+  };
+
+  return <Email />;
+};
+
+export default Footer;
