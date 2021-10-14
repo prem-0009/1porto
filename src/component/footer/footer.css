@@ -1,15 +1,14 @@
 .home-footer {
-    position: fixed;
-    bottom: 30px;
-    background-color: ivory;
-    padding: .5rem;
-    border-radius: 8px;
-    transition: all 0.3s ease-in;
+  position: fixed;
+  bottom: 30px;
+  background-color: ivory;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: all 0.3s ease-in;
 }
 
-
-.home-footer:hover 
-{
-    background-color: #eebab2;
-    cursor: pointer;
+.home-footer:hover {
+  background-color: #eebab2;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
 }

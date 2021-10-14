@@ -8,7 +8,7 @@ const Footer = () => {
   const [copyText, setCopyText] = useState("email");
   const [copySuccess, setCopySuccess] = useState("");
 
-  const handleFlip = () => {
+  const handleOver = () => {
     setCopyText("prem.sherpa890@gmail.com");
 
     setTimeout(() => {
@@ -27,27 +27,23 @@ const Footer = () => {
     }, 500);
   };
 
-  const Email = () => {
-    return (
-      <div className="home-footer" onClick={handleFlip}>
-        {copyText === "email" ? (
-          copyText
-        ) : (
-          <div className="email-footer">
-            <span>{copyText}</span>&nbsp;&nbsp;
-            <Badge badgeContent={copySuccess} sx={{ padding: "1px" }}>
-              <ContentCopyIcon
-                fontSize="small"
-                onClick={(e) => handleIconClick(e)}
-              />
-            </Badge>
-          </div>
-        )}
-      </div>
-    );
-  };
-
-  return <Email />;
+  return (
+    <div className="home-footer" onMouseOver={handleOver}>
+      {copyText === "email" ? (
+        copyText
+      ) : (
+        <div className="email-footer">
+          <span>{copyText}</span>&nbsp;&nbsp;
+          <Badge badgeContent={copySuccess} sx={{ padding: "1px" }}>
+            <ContentCopyIcon
+              fontSize="small"
+              onClick={(e) => handleIconClick(e)}
+            />
+          </Badge>
+        </div>
+      )}
+    </div>
+  );
 };
 
 export default Footer;

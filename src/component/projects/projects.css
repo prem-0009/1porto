@@ -11,7 +11,7 @@
 .link-github {
   color: black;
   padding: 0px;
-  margin-left: 0px;
+  margin-left: 15px;
   text-decoration: none;
   width: fit-content;
 }
@@ -31,7 +31,6 @@
 .work {
   margin-top: 30px;
   margin-bottom: 20px;
-  animation: App-logo-spin infinite 20s linear;
 }
 
 a.link-project:hover {
