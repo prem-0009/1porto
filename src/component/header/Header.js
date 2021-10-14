@@ -21,7 +21,7 @@ const Header = () => {
 
   useEffect(() => {
     greeting();
-  }, [hours]);
+  });
 
   return (
     <div className="home-body">
