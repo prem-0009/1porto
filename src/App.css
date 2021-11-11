@@ -2,36 +2,40 @@
 
 .App {
   background-color: #f2e9e4;
-  height: 100vh;
   color: black;
   font-family: "Noto Serif", serif;
-  /* hide the white space--found this through inspection */
-  overflow: hidden;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
   margin: auto;
-  max-width: 75vw;
-  margin-top: 5vh;
-  height: 90vh;
-  font-size: 1.1rem;
+  margin-bottom: 10rem;
+  font-family: "Montserrat", sans-serif;
 }
 
 * body {
   background-color: #f2e9e4;
   margin: 0;
+  font-family: "Montserrat", sans-serif;
 }
 
 @media (max-width: 600px) {
   .App {
     margin: auto;
-    max-width: 85vw;
-    max-height: 85vh;
-  }
+    max-width: 90vw;
+    }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 811px) {
   .App {
     margin: auto;
-    max-width: 50vw;
-    max-height: 60vh;
-    margin-top: 8vh;
-  }
+    max-width: 41%;
+    }
 }
+/* @media (min-width: 810px) {
+  .App {
+    margin: auto;
+    max-width: 50%;
+    /* max-height: 90vh; */
+/* margin-top: 5vh; */
+/* }
+}  */

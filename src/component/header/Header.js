@@ -1,32 +1,22 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+
 import "./header.css";
 
 const Header = () => {
-  let today = new Date();
-  let hours = today.getHours();
-
-  const [timeNow, setTimeNow] = useState("");
-
-  const greeting = () => {
-    return hours >= 12 && hours < 17
-      ? setTimeNow("afternoon")
-      : hours >= 17 && hours < 20
-      ? setTimeNow("evening")
-      : hours >= 20 && hours < 6
-      ? setTimeNow("night")
-      : hours >= 6 && hours < 12
-      ? setTimeNow("morning")
-      : "";
+  const Preface = () => {
+    return (
+      <article>
+        Hello there.. it has been quite a journey,.. learning web development..it
+        has been quite a astounding career change..and I believe it will be a long ride..
+      </article>
+    );
   };
-
-  useEffect(() => {
-    greeting();
-  });
-
   return (
     <div className="home-body">
-      <h2 className="home-header">Good {timeNow}</h2>
-      <h3 className="work-title">My Project</h3>
+      <h2 className="home-header">
+        <Preface />
+      </h2>
+      <h3 className="work-title">My Projects</h3>
     </div>
   );
 };

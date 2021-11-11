@@ -1,10 +1,16 @@
 .work-title {
   margin-top: 20vh;
   text-decoration: underline;
+  /* margin-bottom: 0.1em; */
 }
 
 .home-header {
-  text-decoration: underline;
+  /* text-decoration: underline; */
+}
+
+article{
+  padding: 0px;
+  /* border: 2px solid black; */
 }
 
 @keyframes App-logo-spin {
