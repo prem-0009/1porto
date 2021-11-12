@@ -1,24 +1,59 @@
-import React from "react";
-
+import React, { useState, useRef } from "react";
 import "./header.css";
+import img from "../../vid/giphy1.gif";
 
 const Header = () => {
+  const [word, setWord] = useState("astounding");
+  const [isScrolling, setIsScrolling] = useState(false);
+
+  let ref = null;
+
+  onscroll = () => {
+    setIsScrolling(true);
+
+    console.log("scorollling");
+
+    if (window.pageYOffset > 217) {
+      setIsScrolling(false);
+    }
+    console.log(typeof(window.pageYOffset))
+
+    // clearTimeout(ref);
+
+    // ref = setTimeout(() => {
+    //   setIsScrolling(false);
+    // }, 200);
+  };
+
   const Preface = () => {
     return (
-      <article>
-        Hello there.. it has been quite a journey,.. learning web development..it
-        has been quite a astounding career change..and I believe it will be a long ride..
-      </article>
+      <div className="article">
+        <div
+          style={{ backgroundImage: `url(${img})` }}
+          className="background-image"
+          // style={{marginTop:'25vh', }}
+        >
+          <text>Hello there..</text>
+        </div>
+        {isScrolling ? (
+          <div
+            style={{
+              marginBottom: "20vh",
+              position: "fixed",
+              bottom: "-18.5vh",
+              color: "black",
+              zIndex: "3",
+            }}
+          >
+            scroll down
+          </div>
+        ) : (
+          ""
+        )}
+      </div>
     );
   };
-  return (
-    <div className="home-body">
-      <h2 className="home-header">
-        <Preface />
-      </h2>
-      <h3 className="work-title">My Projects</h3>
-    </div>
-  );
+  return <Preface />;
 };
 
 export default Header;

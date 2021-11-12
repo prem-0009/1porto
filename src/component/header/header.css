@@ -1,23 +1,35 @@
-.work-title {
-  margin-top: 20vh;
-  text-decoration: underline;
-  /* margin-bottom: 0.1em; */
-}
-
-.home-header {
-  /* text-decoration: underline; */
-}
-
-article{
-  padding: 0px;
+.article {
+  /* padding: 10px; */
+  /* z-index: 1; */
+  font-family: "Montserrat";
+	text-align: center;
+	color: #FFF;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+  letter-spacing: 1px;
+  /* font-size: 30px; */
+  /* padding: 0px; */
+  /* box-sizing: border-box; */
+  /* position: fixed; */
   /* border: 2px solid black; */
+  
+}
+.background-image{
+  background-size: cover;
+	color: transparent;
+	/* -moz-background-clip: text; */
+	-webkit-background-clip: text;
+	text-transform: uppercase;
+  font-size: 5rem;
+  /* width: ent; */
+  /* border: 2px solid black; */
+	/* line-height: .75; */
+	/* margin: 10px 0; */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+svg{
+  position: fixed;
 }

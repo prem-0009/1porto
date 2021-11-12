@@ -1,41 +1,63 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap");
+.app-background {
+  background-repeat: no-repeat;
+  background-size: 95% 90% ;
+  background-position: center ;
+  background-attachment: fixed;
+}
 
 .App {
-  background-color: #f2e9e4;
+  /* background-color: #f2e9e4; */
   color: black;
   font-family: "Noto Serif", serif;
   font-size: 1rem;
   display: flex;
   flex-direction: column;
   margin: auto;
-  margin-bottom: 10rem;
+  /* margin-bottom: rem; */
   font-family: "Montserrat", sans-serif;
+  /* border: 2px solid rebeccapurple; */
+  /* height: 50vh; */
 }
 
 * body {
   background-color: #f2e9e4;
   margin: 0;
-  font-family: "Montserrat", sans-serif;
+  /* font-family: "Montserrat", sans-serif; */
 }
+
+/* .App {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-points-y: repeat(100vh);
+  scroll-snap-destination: 0 0;
+  scroll-snap-type: y mandatory;
+  scroll-snap-type: mandatory;
+}
+
+.App
+.app-second
+{
+  scroll-snap-align: start;
+} */
 
 @media (max-width: 600px) {
   .App {
     margin: auto;
-    max-width: 90vw;
-    }
+    width: 95vw;
+
+    /* height: 98vh; */
+  }
+  .app-background{
+    /* background-size: '100% 100%'; */
+    background-attachment: fixed;
+    background-size: 96% 93% ;
+    
+  }
 }
 
-@media (min-width: 811px) {
+@media (min-width: 601px) {
   .App {
     margin: auto;
-    max-width: 41%;
-    }
+    width: 40vw;
+  }
 }
-/* @media (min-width: 810px) {
-  .App {
-    margin: auto;
-    max-width: 50%;
-    /* max-height: 90vh; */
-/* margin-top: 5vh; */
-/* }
-}  */

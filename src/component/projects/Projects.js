@@ -1,5 +1,6 @@
 import React from "react";
 import "./projects.css";
+import img from "../../vid/giphy1.gif";
 
 const Projects = () => {
   const obj = [
@@ -22,19 +23,19 @@ const Projects = () => {
   const Spell = () => {
     return (
       <>
-        I made this website with my child in my mind. It lets me type a word and 
+        I made this website with my child in my mind. It lets me type a word and
         with:
         <ul>
           <li>
             <span>Play button</span>: The app will pronounce the word.
           </li>
           <li>
-            <span>Correct button</span>: If the word is spelled correctly, the
-            correct word can be saved.
+            <span>Correct button</span>: If the word is spelled correctly, it
+            can be manually saved.
           </li>
           <li>
-            <span>Incorrect button</span>:If the word is spelled incorrectly, it
-            can be saved for future reference.
+            <span>Incorrect button</span>: If the word is spelled incorrectly,
+            it can be manually saved for future reference.
           </li>
           <li>
             <span>Correct and Incorrect tabs</span>: We can view saved words.
@@ -51,8 +52,8 @@ const Projects = () => {
   const Movie = () => {
     return (
       <>
-        It is a website to search for movies and tv-shows. It also filters list as
-        per the selected button-genre.
+        It is a website to search for movies and tv-shows. It also filters list
+        as per the selected button-genre.
         <ul>
           <li>
             <span>Tech used</span>: React, Material UI, CSS, Javascript, TMDB's
@@ -64,33 +65,52 @@ const Projects = () => {
   };
 
   return (
-    <div className="projects">
-      {obj.map((item) => {
-        return (
-          <div className="work-main">
-            <iframe src={item.video} />
-            <article>
-              {item.name === "spell" ? (
-                <Spell />
-              ) : item.name === "movie" ? (
-                <Movie />
-              ) : (
-                ""
-              )}
-            </article>
+    <>
+      <div
+        className='project-top-bar'
+      ></div>
+      <h3
+        style={{
+          backgroundImage: `url(${img})`,
+          fontSize: "2rem",
+          textAlign: "center",
+        }}
+        className="background-image"
+      >
+        My Projects
+      </h3>
+      <div className="projects">
+        {obj.map((item, i) => {
+          return (
+            <div className="work-main" key={i}>
+              <iframe src={item.video} title={item.name} />
+              <article className="project-article">
+                {item.name === "spell" ? (
+                  <Spell />
+                ) : item.name === "movie" ? (
+                  <Movie />
+                ) : (
+                  ""
+                )}
+              </article>
 
-            <div>
-              <a className="link" href={item.webLink}>
-                Live site
-              </a>{" "}
-              <a className="link" href={item.gitLink}>
-                Github
-              </a>
+              <div>
+                <a className="link" href={item.webLink}>
+                  Live site
+                </a>{" "}
+                <a className="link" href={item.gitLink}>
+                  Github
+                </a>
+              </div>
             </div>
-          </div>
-        );
-      })}
-    </div>
+          );
+        })}
+      </div>
+
+      <div
+        className='project-bottom-bar'
+      ></div>
+    </>
   );
 };
 
