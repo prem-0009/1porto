@@ -1,55 +1,31 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import "./header.css";
-import img from "../../vid/giphy1.gif";
+
 
 const Header = () => {
-  const [word, setWord] = useState("astounding");
   const [isScrolling, setIsScrolling] = useState(false);
 
-  let ref = null;
+  // const img = 'https://giphy.com/embed/26BROrSHlmyzzHf3i';
 
   onscroll = () => {
     setIsScrolling(true);
 
-    console.log("scorollling");
-
-    if (window.pageYOffset > 217) {
+    if (window.pageYOffset > 225) {
       setIsScrolling(false);
     }
-    console.log(typeof(window.pageYOffset))
-
-    // clearTimeout(ref);
-
-    // ref = setTimeout(() => {
-    //   setIsScrolling(false);
-    // }, 200);
   };
 
   const Preface = () => {
     return (
       <div className="article">
         <div
-          style={{ backgroundImage: `url(${img})` }}
+          // style={{ backgroundImage: `url(${img})` }}
           className="background-image"
-          // style={{marginTop:'25vh', }}
         >
-          <text>Hello there..</text>
+        {/* <iframe src="https://giphy.com/embed/26BROrSHlmyzzHf3i" width="480" height="480" ></iframe> */}
+          <span>Hello there..</span>
         </div>
-        {isScrolling ? (
-          <div
-            style={{
-              marginBottom: "20vh",
-              position: "fixed",
-              bottom: "-18.5vh",
-              color: "black",
-              zIndex: "3",
-            }}
-          >
-            scroll down
-          </div>
-        ) : (
-          ""
-        )}
+        {isScrolling ? <div className="scroll-down">scroll down</div> : ""}
       </div>
     );
   };

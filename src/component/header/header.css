@@ -1,35 +1,27 @@
 .article {
-  /* padding: 10px; */
-  /* z-index: 1; */
   font-family: "Montserrat";
-	text-align: center;
-	color: #FFF;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	height: 100vh;
-  letter-spacing: 1px;
-  /* font-size: 30px; */
-  /* padding: 0px; */
-  /* box-sizing: border-box; */
-  /* position: fixed; */
-  /* border: 2px solid black; */
-  
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  letter-spacing: .3rem;
+  font-weight: 400;
 }
-.background-image{
+.background-image {
+  background-image: url('https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy-downsized.gif');
   background-size: cover;
-	color: transparent;
-	/* -moz-background-clip: text; */
-	-webkit-background-clip: text;
-	text-transform: uppercase;
-  font-size: 5rem;
-  /* width: ent; */
-  /* border: 2px solid black; */
-	/* line-height: .75; */
-	/* margin: 10px 0; */
+  color: transparent;
+  -webkit-background-clip: text;
+  text-transform: uppercase;
+  font-size: 4rem;
 }
 
-svg{
+.scroll-down {
   position: fixed;
+  margin-top: 96.4vh;
+  color: black;
+  z-index: 1;
 }

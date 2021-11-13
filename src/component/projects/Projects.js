@@ -1,6 +1,6 @@
 import React from "react";
 import "./projects.css";
-import img from "../../vid/giphy1.gif";
+
 
 const Projects = () => {
   const obj = [
@@ -66,14 +66,10 @@ const Projects = () => {
 
   return (
     <>
-      <div
-        className='project-top-bar'
-      ></div>
+      <div className="project-top-bar"></div>
       <h3
         style={{
-          backgroundImage: `url(${img})`,
-          fontSize: "2rem",
-          textAlign: "center",
+          fontSize: "1.9rem",fontWeight:'550'
         }}
         className="background-image"
       >
@@ -107,9 +103,7 @@ const Projects = () => {
         })}
       </div>
 
-      <div
-        className='project-bottom-bar'
-      ></div>
+      <div className="project-bottom-bar"></div>
     </>
   );
 };

@@ -10,12 +10,9 @@ function App() {
       style={{
         backgroundImage: `url(${img})`,
       }}
-      className='app-background'
+      className="app-background"
     >
-      <div
-        className="App"
-        // style={{ backgroundImage: `url(${img})` }}
-      >
+      <div className="App">
         <Header />
         <div className="app-second">
           <Projects />

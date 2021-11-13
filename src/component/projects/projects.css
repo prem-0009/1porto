@@ -1,10 +1,18 @@
 .project-top-bar,
 .project-bottom-bar {
   background-color: #f2e9e4;
-  padding: 2.6vh;
+  /* padding: 2.6vh; */
   position: fixed;
   width: 100%;
-  margin-left: -30%;
+  /* margin-left: -30%; */
+
+  /*  */
+  /* background-color: #f2e9e4; */
+  padding: 1.7vh;
+  /* position: fixed; */
+  padding-right: 12rem;
+  /* width: 80vw; */
+  /* z-index: 2; */
 }
 
 .project-top-bar {
@@ -15,38 +23,54 @@
   bottom: 0;
 }
 
+.background-image {
+  background-image: url("https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy-downsized.gif");
+  /* why below not working */
+  /* font-size: 10px; */
+  text-align: center;
+}
+
 .projects {
   display: flex;
   flex-direction: column;
-  /* justify-content: flex-start; */
-  gap: 15rem;
+  gap: 4rem;
+  margin: auto;
   margin-bottom: 5rem;
-  width: 100%;
-  /* overflow: hidden; */
-  /* background-color: royalblue; */
+  width: 96vw;
+  /* padding: 0; */
+
+  /* width: 100%; */
   z-index: -1;
   border-radius: 1rem;
+  /* border: 1px solid red; */
 }
 .work-main {
   display: flex;
   flex-direction: column;
-  background-color: #ff9500;
+  background-color: #33415c;
+  /* color: wheat; */
   padding: 0.5rem;
   padding-bottom: 1rem;
   border-radius: 1rem;
-  box-shadow: 3px 3px 3px black;
-  /* height: 60vh; */
-  /* width: 100%; */
+  /* box-shadow: 3px 3px 3px black; */
+
+  /* margin: auto;
+    width: 90vw;  */
 }
 
 iframe {
   border-radius: 1rem;
+  border: 2px solid black;
+  height: 375px;
 }
 .project-article {
   padding: 0.5rem;
   padding-left: 0px;
-  font-size: 15px;
-  color: black;
+  font-size: 14px;
+  font-stretch: normal;
+  line-height: 1.5em;
+  color: #61a5c2;
+  gap: 5rem;
 }
 
 .ul,
@@ -62,7 +86,7 @@ iframe {
   padding: 0.5rem;
   border-radius: 8px;
   transition: background 0.3s ease-in-out;
-  background-color: ivory;
+  background-color: #61a5c2;
   width: fit-content;
 }
 
@@ -72,37 +96,31 @@ a.link:hover {
 }
 
 span {
-  font-weight: bold;
+  /* font-weight: bold; */
   text-decoration: underline;
 }
 
-@media (max-width: 600px) {
-  iframe {
-    height: 300px;
+@media (min-width: 811px) and (max-width: 1007px) {
+  .projects {
+    width: 55vw;
   }
   .work-main {
-    margin: auto;
-    width: 90vw;
+    box-shadow: 5px 5px 5px black;
   }
-  .project-top-bar, .project-bottom-bar {
-     background-color: #f2e9e4;
-    padding: 1.8vh;
-    position: fixed; 
-    padding-right: 12rem;
-    width: 80vw;
-    z-index: 2;
-    /* margin-left: -30%; */
-    /* border: 2px solid black; */
-  }
-  .projects{
-    gap: 5rem;
-  }
-  
+  /* .project-article{
+    font-size: rem;
+    font-weight: initial;
+  } */
 }
-@media (min-width: 600px) {
-  iframe {
-    height: 450px;
-    /* width: fit-content; */
-    /* height: 100vh; */
+
+@media (min-width: 1007px) {
+  .projects {
+    width: 600px;
+  }
+  .work-main {
+    box-shadow: 5px 5px 5px black;
+  }
+  .project-article{
+
   }
 }
