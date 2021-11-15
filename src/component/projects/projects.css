@@ -1,18 +1,10 @@
 .project-top-bar,
 .project-bottom-bar {
   background-color: #f2e9e4;
-  /* padding: 2.6vh; */
   position: fixed;
   width: 100%;
-  /* margin-left: -30%; */
-
-  /*  */
-  /* background-color: #f2e9e4; */
   padding: 1.7vh;
-  /* position: fixed; */
   padding-right: 12rem;
-  /* width: 80vw; */
-  /* z-index: 2; */
 }
 
 .project-top-bar {
@@ -25,9 +17,10 @@
 
 .background-image {
   background-image: url("https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy-downsized.gif");
-  /* why below not working */
+  /* why below not working but works with inline*/
   /* font-size: 10px; */
   text-align: center;
+  font-size: 1px;
 }
 
 .projects {
@@ -37,25 +30,17 @@
   margin: auto;
   margin-bottom: 5rem;
   width: 96vw;
-  /* padding: 0; */
 
-  /* width: 100%; */
   z-index: -1;
   border-radius: 1rem;
-  /* border: 1px solid red; */
 }
 .work-main {
   display: flex;
   flex-direction: column;
   background-color: #33415c;
-  /* color: wheat; */
   padding: 0.5rem;
   padding-bottom: 1rem;
   border-radius: 1rem;
-  /* box-shadow: 3px 3px 3px black; */
-
-  /* margin: auto;
-    width: 90vw;  */
 }
 
 iframe {
@@ -96,7 +81,6 @@ a.link:hover {
 }
 
 span {
-  /* font-weight: bold; */
   text-decoration: underline;
 }
 
@@ -107,10 +91,6 @@ span {
   .work-main {
     box-shadow: 5px 5px 5px black;
   }
-  /* .project-article{
-    font-size: rem;
-    font-weight: initial;
-  } */
 }
 
 @media (min-width: 1007px) {
@@ -119,8 +99,5 @@ span {
   }
   .work-main {
     box-shadow: 5px 5px 5px black;
-  }
-  .project-article{
-
   }
 }

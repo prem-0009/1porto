@@ -5,14 +5,17 @@ import "./App.css";
 import img from "./vid/sunset.jpeg";
 
 function App() {
+console.log(window.innerHeight);
+
   return (
+    <div className="App">
     <div
       style={{
         backgroundImage: `url(${img})`,
+        height:`${window.innerHeight}`
       }}
       className="app-background"
     >
-      <div className="App">
         <Header />
         <div className="app-second">
           <Projects />

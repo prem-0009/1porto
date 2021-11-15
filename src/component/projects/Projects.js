@@ -1,7 +1,6 @@
 import React from "react";
 import "./projects.css";
 
-
 const Projects = () => {
   const obj = [
     {
@@ -23,7 +22,7 @@ const Projects = () => {
   const Spell = () => {
     return (
       <>
-        I made this website with my child in my mind. It lets me type a word and
+        I made this website for parents with junior kids. It lets guardian type a word and
         with:
         <ul>
           <li>
@@ -67,14 +66,9 @@ const Projects = () => {
   return (
     <>
       <div className="project-top-bar"></div>
-      <h3
-        style={{
-          fontSize: "1.9rem",fontWeight:'550'
-        }}
-        className="background-image"
-      >
-        My Projects
-      </h3>
+      <h3 className="background-image"
+      style={{fontSize:'2rem'}}
+      >My Projects</h3>
       <div className="projects">
         {obj.map((item, i) => {
           return (

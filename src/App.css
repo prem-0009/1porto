@@ -1,6 +1,5 @@
 .app-background {
   background-repeat: no-repeat;
-  background-size: 95% 90%;
   background-position: center;
   background-attachment: fixed;
 }
@@ -20,11 +19,6 @@
   margin: 0;
 }
 
-.app-background {
-  background-attachment: fixed;
-  background-size: 96% 93%;
-}
-
 @media (min-width: 641px) and(max-width:1007px) {
   iframe {
     height: 560px;
@@ -32,4 +26,7 @@
 }
 
 @media (min-width: 1008px) {
+  .app-background {
+    background-size: 95vw 95vh;
+  }
 }
