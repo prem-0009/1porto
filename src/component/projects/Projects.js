@@ -68,7 +68,7 @@ const Projects = () => {
       <div className="project-top-bar"></div>
       <h3 className="background-image"
       style={{fontSize:'2rem'}}
-      >My Projects</h3>
+      >Projects</h3>
       <div className="projects">
         {obj.map((item, i) => {
           return (

@@ -3,6 +3,7 @@ import "./header.css";
 
 const Header = () => {
   const [isScrolling, setIsScrolling] = useState(true);
+  
 
   onscroll = () => {
     setIsScrolling(true);
@@ -16,7 +17,8 @@ const Header = () => {
     return (
       <div className="article">
         <div className="background-image">
-          <span>Hello there..</span>
+          <text>Hello there<br/><br/>fellow earthers
+          </text>
         </div>
         {isScrolling ? <div className="scroll-down">scroll down</div> : ""}
       </div>
