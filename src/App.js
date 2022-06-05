@@ -7,7 +7,7 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <img />
+      
       <div className="app-second">
         <Header />
         <Projects />
